@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Money on my Mind</title>
+		<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<br/>
+		<br/>
+		<div class="whiteBack">
+		<br/>
+		<h1 class="main">Money on Mind - My Mind on REST API</h1>
+		<br/>
+		<h2 class="title">Budget Sheet</h1>
+		<br/>
+		<table id="cTable">
+			<tr>
+				<td></td>
+				<td><b>Category</b></td>
+				<td><b>Monthly Budget</b></td>
+				<td><b>Money Spent</b></td>
+				<td><b>Budget Remaining</b></td>
+			</tr>
+		</table>
+		<br/>
+		<br/>
+		<h2 class="title">Purchases Made</h2>
+		<br/>
+		<table id="pTable">
+			<tr>
+				<td><b>Purchase Category</b></td>
+				<td><b>Amount</b></td>
+				<td><b>Description</b></td>
+				<td><b>Date</b></td>
+			</tr>
+		</table>
+		<br/>
+		<br/>
+		<form>
+			New Category: <input type="text" id="newCat" name="" value="" />
+			Monthly Budget: $<input type="number" id="newBudget" name="" value="0" />
+			<input type="button" id="submitCat" value="Make a New Category" />
+		</form>
+		<br/>
+		<br/>
+		<form>
+			New Purchase Amount: $<input type="number" id="newPurchase" name="" value="0" />
+			<select id="selectCat">
+				<option>Unspecified</option>
+				{% if categories %}
+					{% for c in categories %}
+						<option>{{c}}</option>
+					{% endfor %}
+				{% endif %}
+			</select>
+			Description: <input type="text" id="purchaseDescription" />
+			Date: <input type="date" id="purchaseDate" />
+			<input type="button" id="submitPurchase" value="Make a New Purchase" />
+		</form>
+		</div>
+	</body>
+</html>
