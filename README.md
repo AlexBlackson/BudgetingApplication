@@ -1,11 +1,6 @@
-# money-on-my-mind-and-my-mind-on-my-rest-api-AlexBlackson
-money-on-my-mind-and-my-mind-on-my-rest-api-AlexBlackson created by GitHub Classroom
+# Money on my Mind and my Mind on my REST API By Alex Blackson
 
 Name: Alex Blackson
-
-Pitt ID: arb171
-
-Peoplesoft Number: 3920894
 
 ## Installation 
 
